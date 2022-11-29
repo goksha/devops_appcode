@@ -1,0 +1,4 @@
+zoo superuser
+username: zooadmin
+email admin@zoo.com
+pass: team8

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <title>Booking web page</title>
+            <meta charset="utf-8"> 
+            <meta name="description" content="My events" />
+            <meta name="author" content="Erick Ayala" />
+            <meta name="keywords"content="My events" />
+            <link rel="stylesheet" href="styles.css" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Event List</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'events/site.css' %}" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoo</title>
+    {% load static %} <img src="{% static "events/media/aquiles.png" %}" alt="home" />
+</head>
+<form method="post">{% csrf_token %}
+    <h1>Zoo</a></h1>
+    <p>Confirm the cancelation "{{ event }}"</p>
+    <input type="submit" value="Confirm" />
+</form>

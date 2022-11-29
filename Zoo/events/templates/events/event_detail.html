@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <title>Booking web page</title>
+            <meta charset="utf-8"> 
+            <meta name="description" content="My events" />
+            <meta name="author" content="Erick Ayala" />
+            <meta name="keywords"content="My events" />
+            <link rel="stylesheet" href="styles.css" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Event List</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'events/site.css' %}" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Detail</title>
+</head>
+<body>
+    <h1>Zoo</a></h1>
+    {% load static %} <img src="{% static "events/media/aquiles.png" %}" alt="home" />
+    <p> Your Name: {{ event.name }} | <a href="{% url 'events:event_update' event.id %}">Update</a> |
+        <a href="{% url 'events:event_delete' event.id %}">Delete</a>
+    </p>
+    <p> Event: {{ event.get_status_display }} </p>
+    <p> <a href="{% url 'events:event_list' %}">View All Events</a> |
+        <a href="{% url 'events:event_create'%}">New Event</a>
+    </p>
+</body>
+</html>

@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        <title>Booking web page</title>
+        <meta charset="utf-8"> 
+        <meta name="description" content="Zoo web page" />
+        <meta name="author" content="Erick Ayala" />
+        <meta name="keywords"content="Zoo web page" />
+
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'events/site.css' %}" />
+
+    </head>
+
+Hi {{ user.username }}!
+  <nav class="NAVIGATION">
+    <ul>
+        <ls><a href="{% url 'events:event_list' %}">| My events</a></ls>
+    </ul>
+    </nav>
+  <p><a href="{% url 'logout' %}">Log Out</a></p>
+{% else %}
+  <p>You are not logged in</p>
+
+
+
+  <!DOCTYPE html>
+
+  <html lang="en">
+      
+      <head>
+          <title>Booking web page</title>
+          <meta charset="utf-8"> 
+          <meta name="description" content="Zoo web page" />
+          <meta name="author" content="Erick Ayala" />
+          <meta name="keywords"content="Zoo web page" />
+
+          {% load static %}
+          <link rel="stylesheet" type="text/css" href="{% static 'events/site.css' %}" />
+  
+      </head>
+  
+      <body>
+  
+          <div class="CONTENT">
+              <header id="MAIN">
+                  <h1>Zoo web page</a></h1>
+                  {% load static %} <img src="{% static "events/media/aquiles.png" %}" alt="home" />
+                  <p>CONTENT</p>
+              </header>
+              <nav class="NAVIGATION">
+                <ul>
+                    <ls><a href="{% url 'login' %}">Log In</a></ls>
+                </ul>
+              </nav>
+  
+              <section>
+                  <article>
+                      <hgroup>
+                          <h1>Reptiles week</h1>
+                          <time datetime="25-09-2022">Published September 25 of 2022</time>
+                          <p>What is that? lear while you have fun with the Reptile week</p>
+                          <p>Meet and feed some of the most amazing friends in the zoo</p>
+                          {% load static %} <img src="{% static "events/media/reptile.jpg" %}" alt="home" />
+                      </hgroup>
+                  </article>
+  
+                  <article>
+                      <hgroup>
+                          <h1>Adopting a pet</h1>
+                          <time datetime="25-09-2022">Published September 25 of 2022</time>
+                          <p>Be with us in this wonderful event where you can giva a home to some lovely friends</p>
+                          {% load static %} <img src="{% static "events/media/adopt.jpg" %}" alt="home" />
+                      </hgroup>
+                  </article>
+              </section>
+  
+              <section>
+                  <article>
+                      <hgroup>
+                          <h1 class="NEWS">Feed the deers</h1>
+                          <time datetime="25-09-2022">Published September 25 of 2022</time>
+                          <p>Meet and feed some of the most amazing friends in the zoo</p>
+                          {% load static %} <img src="{% static "events/media/deer.jpg" %}" alt="home" />
+                          <footer>Comments (0)</footer>
+                      </hgroup>
+                  </article>
+  
+              <footer class="BOTTOM">
+                  <h4>About us</h4>
+                  <p>Team 8 power</p>
+                  <p>Email: sales@zoo.com</p>
+                  <p>Phone: 12 58 69 36 52</p>
+              </footer>
+          </div>
+  
+      </body>
+  
+  </html>
+  
+
+
+
+
+
+
+
+
+
+{% endif %}
+{% endblock %}
